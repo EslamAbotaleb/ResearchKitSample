@@ -25,59 +25,57 @@ public var SurveyTask: ORKOrderedTask {
 
           questionItem =  questionSurvey?.questions
 
-            questionItem?.forEach({ dc in
-                if dc.questionType == "single_select" {
-                    let questQuestionStepTitle = dc.question!
+            questionItem?.forEach({ questionObject in
+                if questionObject.questionType == "single_select" {
+                    let questQuestionStepTitle = questionObject.question!
                                       var textChoices = [ORKTextChoice]()
-                    for (_, ans) in dc.answers!.enumerated() {
+                    for (_, ans) in questionObject.answers!.enumerated() {
                         textChoices.append(ORKTextChoice(text: ans.value! , value: ans.value!  as NSCoding & NSCopying & NSObjectProtocol))
                                       }
                                       let questAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-                    let questQuestionStep = ORKQuestionStep(identifier: dc.id!, title: questQuestionStepTitle, answer: questAnswerFormat)
+                    let questQuestionStep = ORKQuestionStep(identifier: questionObject.id!, title: questQuestionStepTitle, answer: questAnswerFormat)
                     surveyQuestionAns += [questQuestionStep]
                     
-                } else if dc.questionType == "multi_select" {
+                } else if questionObject.questionType == "multi_select" {
 
-                    let questQuestionStepTitlemultiple = dc.question
+                    let questQuestionStepTitlemultiple = questionObject.question
                     var textChoicesmultiple = [ORKTextChoice]()
-                    for (_, ans) in  dc.answers!.enumerated() {
+                    for (_, ans) in  questionObject.answers!.enumerated() {
                         textChoicesmultiple.append(ORKTextChoice(text: ans.value!, value: ans.value! as NSCoding & NSCopying & NSObjectProtocol))
                     }
 
                     let questAnswerFormatAnswer: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesmultiple)
-                    let questQuestionStepAnswer = ORKQuestionStep(identifier:  dc.id!, title: questQuestionStepTitlemultiple, answer: questAnswerFormatAnswer)
+                    let questQuestionStepAnswer = ORKQuestionStep(identifier:  questionObject.id!, title: questQuestionStepTitlemultiple, answer: questAnswerFormatAnswer)
                     surveyQuestionAns += [questQuestionStepAnswer]
                     
-                } else if (dc.questionType == "year_picker") {
+                } else if (questionObject.questionType == "year_picker") {
                     
                     let nameAnswerFormat = ORKDateAnswerFormat.dateAnswerFormat()
-                    let nameQuestionStepTitle =  dc.question!
-                    let nameQuestionStep = ORKQuestionStep(identifier: dc.id!, title: nameQuestionStepTitle, answer: nameAnswerFormat)
+                    let nameQuestionStepTitle =  questionObject.question!
+                    let nameQuestionStep = ORKQuestionStep(identifier: questionObject.id!, title: nameQuestionStepTitle, answer: nameAnswerFormat)
                     surveyQuestionAns += [nameQuestionStep]
                     
                     
-                } else if (dc.questionType == "single_text_field") {
+                } else if (questionObject.questionType == "single_text_field") {
                     
-                    let questQuestionStepTitleage = dc.question
+                    let questQuestionStepTitleage = questionObject.question
                     
                     let ageAnswer = ORKNumericAnswerFormat.integerAnswerFormat(withUnit: "years")
                     ageAnswer.minimum = 18
                     ageAnswer.maximum = 85
-                    let ageQuestionStep = ORKQuestionStep(identifier: dc.id!, title: questQuestionStepTitleage, answer: ageAnswer)
+                    let ageQuestionStep = ORKQuestionStep(identifier: questionObject.id!, title: questQuestionStepTitleage, answer: ageAnswer)
                     surveyQuestionAns += [ageQuestionStep]
-                } else if (dc.questionType == "date_picker") {
+                } else if (questionObject.questionType == "date_picker") {
                     let dateFormat = ORKDateAnswerFormat.dateAnswerFormat()
-                    let nameQuestionStepTitle =  dc.question!
-                    let nameQuestionStep = ORKQuestionStep(identifier: dc.id!, title: nameQuestionStepTitle, answer: dateFormat)
+                    let nameQuestionStepTitle =  questionObject.question!
+                    let nameQuestionStep = ORKQuestionStep(identifier: questionObject.id!, title: nameQuestionStepTitle, answer: dateFormat)
                     surveyQuestionAns += [nameQuestionStep]
-                    
                 } else {
                     let nameAnswerFormat = ORKTextAnswerFormat()
                     nameAnswerFormat.multipleLines = true
-                    let nameQuestionStepTitle =  dc.question!
-                    let nameQuestionStep = ORKQuestionStep(identifier: dc.id!, title: nameQuestionStepTitle, answer: nameAnswerFormat)
+                    let nameQuestionStepTitle =  questionObject.question!
+                    let nameQuestionStep = ORKQuestionStep(identifier: questionObject.id!, title: nameQuestionStepTitle, answer: nameAnswerFormat)
                     surveyQuestionAns += [nameQuestionStep]
-
                 }
   
             })
