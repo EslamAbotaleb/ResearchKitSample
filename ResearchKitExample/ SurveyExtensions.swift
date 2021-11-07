@@ -13,13 +13,6 @@ extension ORKTextAnswerFormat {
         self.multipleLines = multiLine
     }
 }
-//
-//extension ORKEmailAnswerFormat {
-//    public convenience init(title: String, multiLine: Bool) {
-//            
-//    }
-//}
-
 
 extension ORKCompletionStep {
     public convenience init(identifier: String, title: String, text: String) {

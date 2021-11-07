@@ -21,9 +21,9 @@ public var SurveyTask: ORKOrderedTask {
         do {
               let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
 
-            let answersSurvey = try? JSONDecoder().decode(QuestionsSurveyModel.self, from: data)
+            let questionSurvey = try? JSONDecoder().decode(QuestionsSurveyModel.self, from: data)
 
-          questionItem =  answersSurvey?.questions
+          questionItem =  questionSurvey?.questions
 
             questionItem?.forEach({ dc in
                 if dc.questionType == "single_select" {
