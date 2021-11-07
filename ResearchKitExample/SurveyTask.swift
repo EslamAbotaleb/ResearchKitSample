@@ -7,7 +7,6 @@ import ResearchKit
 //ORKOrderedTask
 public var SurveyTask: ORKOrderedTask {
     
-
     var steps = [ORKStep]()
     func json(from object:Any) -> String? {
         guard let data = try? JSONSerialization.data(withJSONObject: object, options: []) else {
@@ -16,12 +15,13 @@ public var SurveyTask: ORKOrderedTask {
         return String(data: data, encoding: String.Encoding.utf8)
     }
     var surveyQuestionAns = [ORKQuestionStep]()
+
     var questionItem: [Question]?
     if let path = Bundle.main.path(forResource: "examplequestion", ofType: "json") {
         do {
               let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
 
-            let answersSurvey = try? JSONDecoder().decode(AnswersSurvey.self, from: data)
+            let answersSurvey = try? JSONDecoder().decode(QuestionsSurveyModel.self, from: data)
 
           questionItem =  answersSurvey?.questions
 
@@ -30,10 +30,8 @@ public var SurveyTask: ORKOrderedTask {
                     let questQuestionStepTitle = dc.question!
                                       var textChoices = [ORKTextChoice]()
                     for (_, ans) in dc.answers!.enumerated() {
-                        textChoices.append(ORKTextChoice(text: ans.body! , value: ans.body!  as NSCoding & NSCopying & NSObjectProtocol))
+                        textChoices.append(ORKTextChoice(text: ans.value! , value: ans.value!  as NSCoding & NSCopying & NSObjectProtocol))
                                       }
-                   
-                    
                                       let questAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
                     let questQuestionStep = ORKQuestionStep(identifier: dc.id!, title: questQuestionStepTitle, answer: questAnswerFormat)
                     surveyQuestionAns += [questQuestionStep]
@@ -43,7 +41,7 @@ public var SurveyTask: ORKOrderedTask {
                     let questQuestionStepTitlemultiple = dc.question
                     var textChoicesmultiple = [ORKTextChoice]()
                     for (_, ans) in  dc.answers!.enumerated() {
-                        textChoicesmultiple.append(ORKTextChoice(text: ans.body!, value: ans.body! as NSCoding & NSCopying & NSObjectProtocol))
+                        textChoicesmultiple.append(ORKTextChoice(text: ans.value!, value: ans.value! as NSCoding & NSCopying & NSObjectProtocol))
                     }
 
                     let questAnswerFormatAnswer: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: textChoicesmultiple)
@@ -67,9 +65,15 @@ public var SurveyTask: ORKOrderedTask {
                     ageAnswer.maximum = 85
                     let ageQuestionStep = ORKQuestionStep(identifier: dc.id!, title: questQuestionStepTitleage, answer: ageAnswer)
                     surveyQuestionAns += [ageQuestionStep]
+                } else if (dc.questionType == "date_picker") {
+                    let dateFormat = ORKDateAnswerFormat.dateAnswerFormat()
+                    let nameQuestionStepTitle =  dc.question!
+                    let nameQuestionStep = ORKQuestionStep(identifier: dc.id!, title: nameQuestionStepTitle, answer: dateFormat)
+                    surveyQuestionAns += [nameQuestionStep]
+                    
                 } else {
                     let nameAnswerFormat = ORKTextAnswerFormat()
-                                          nameAnswerFormat.multipleLines = true
+                    nameAnswerFormat.multipleLines = true
                     let nameQuestionStepTitle =  dc.question!
                     let nameQuestionStep = ORKQuestionStep(identifier: dc.id!, title: nameQuestionStepTitle, answer: nameAnswerFormat)
                     surveyQuestionAns += [nameQuestionStep]
@@ -78,7 +82,6 @@ public var SurveyTask: ORKOrderedTask {
   
             })
           } catch {
-               // handle error
           }
     }
     
@@ -87,7 +90,6 @@ public var SurveyTask: ORKOrderedTask {
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
     instructionStep.title = "Test Survey"
     instructionStep.text = "Answer three questions to complete the survey."
- 
 
     
     //Summary

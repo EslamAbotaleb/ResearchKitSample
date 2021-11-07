@@ -1,13 +1,8 @@
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let answersSurvey = try? newJSONDecoder().decode(AnswersSurvey.self, from: jsonData)
-
 import Foundation
 
-// MARK: - AnswersSurvey
-struct AnswersSurvey: Codable {
+// MARK: - QuestionsSurveyModel
+struct QuestionsSurveyModel: Codable {
     let questions: [Question]
     let submit: Submit
     let autoFocusText: Bool
@@ -233,9 +228,9 @@ struct Submit: Codable {
     }
 }
 struct Answer: Codable {
-    let body: String?
+    let value: String?
     enum CodingKeys: String, CodingKey {
-    case body = "body"
+    case value = "value"
     }
 
 }

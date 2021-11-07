@@ -12,13 +12,14 @@
 		B7488D8B2737292600DE2CED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7488D8A2737292600DE2CED /* ViewController.swift */; };
 		B7488D902737292700DE2CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7488D8F2737292700DE2CED /* Assets.xcassets */; };
 		B7488D932737292700DE2CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7488D912737292700DE2CED /* LaunchScreen.storyboard */; };
+		B75FCB3627380E8F00D3661F /* AnswerSurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75FCB3527380E8F00D3661F /* AnswerSurveyModel.swift */; };
 		B7C2198B27372C95005100D7 /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2198927372C8E005100D7 /* ORKESerialization.m */; };
 		B7C2199627372CB5005100D7 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2198D27372CB4005100D7 /* ConsentTask.swift */; };
 		B7C2199727372CB5005100D7 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2198E27372CB4005100D7 /* SurveyTask.swift */; };
 		B7C2199927372CB5005100D7 /* examplequestion.json in Resources */ = {isa = PBXBuildFile; fileRef = B7C2199027372CB4005100D7 /* examplequestion.json */; };
 		B7C2199A27372CB5005100D7 /* hardcodedquestionsurvay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2199127372CB5005100D7 /* hardcodedquestionsurvay.swift */; };
 		B7C2199B27372CB5005100D7 /*  SurveyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2199227372CB5005100D7 /*  SurveyExtensions.swift */; };
-		B7C2199C27372CB5005100D7 /* AnswersSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2199327372CB5005100D7 /* AnswersSurvey.swift */; };
+		B7C2199C27372CB5005100D7 /* QuestionsSurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2199327372CB5005100D7 /* QuestionsSurveyModel.swift */; };
 		B7C2199D27372CB5005100D7 /* ActiveTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2199427372CB5005100D7 /* ActiveTask.swift */; };
 		B7C2199E27372CB5005100D7 /* specmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2199527372CB5005100D7 /* specmodel.swift */; };
 		B7C219A027372D0C005100D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C2199F27372D0C005100D7 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		B7488D8F2737292700DE2CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7488D922737292700DE2CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7488D942737292700DE2CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B75FCB3527380E8F00D3661F /* AnswerSurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSurveyModel.swift; sourceTree = "<group>"; };
 		B7C2198727372C8D005100D7 /* ResearchKitExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ResearchKitExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		B7C2198827372C8E005100D7 /* ORKESerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORKESerialization.h; sourceTree = "<group>"; };
 		B7C2198927372C8E005100D7 /* ORKESerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKESerialization.m; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		B7C2199027372CB4005100D7 /* examplequestion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = examplequestion.json; sourceTree = "<group>"; };
 		B7C2199127372CB5005100D7 /* hardcodedquestionsurvay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hardcodedquestionsurvay.swift; sourceTree = "<group>"; };
 		B7C2199227372CB5005100D7 /*  SurveyExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " SurveyExtensions.swift"; sourceTree = "<group>"; };
-		B7C2199327372CB5005100D7 /* AnswersSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersSurvey.swift; sourceTree = "<group>"; };
+		B7C2199327372CB5005100D7 /* QuestionsSurveyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsSurveyModel.swift; sourceTree = "<group>"; };
 		B7C2199427372CB5005100D7 /* ActiveTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTask.swift; sourceTree = "<group>"; };
 		B7C2199527372CB5005100D7 /* specmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = specmodel.swift; sourceTree = "<group>"; };
 		B7C2199F27372D0C005100D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 			children = (
 				B7C2199227372CB5005100D7 /*  SurveyExtensions.swift */,
 				B7C2199427372CB5005100D7 /* ActiveTask.swift */,
-				B7C2199327372CB5005100D7 /* AnswersSurvey.swift */,
+				B7C2199327372CB5005100D7 /* QuestionsSurveyModel.swift */,
 				B7C2198D27372CB4005100D7 /* ConsentTask.swift */,
 				B7C2199027372CB4005100D7 /* examplequestion.json */,
 				B7C2199127372CB5005100D7 /* hardcodedquestionsurvay.swift */,
@@ -118,6 +120,7 @@
 				B7488D912737292700DE2CED /* LaunchScreen.storyboard */,
 				B7488D942737292700DE2CED /* Info.plist */,
 				B7C2198727372C8D005100D7 /* ResearchKitExample-Bridging-Header.h */,
+				B75FCB3527380E8F00D3661F /* AnswerSurveyModel.swift */,
 			);
 			path = ResearchKitExample;
 			sourceTree = "<group>";
@@ -240,7 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C2199A27372CB5005100D7 /* hardcodedquestionsurvay.swift in Sources */,
-				B7C2199C27372CB5005100D7 /* AnswersSurvey.swift in Sources */,
+				B75FCB3627380E8F00D3661F /* AnswerSurveyModel.swift in Sources */,
+				B7C2199C27372CB5005100D7 /* QuestionsSurveyModel.swift in Sources */,
 				B7C2199D27372CB5005100D7 /* ActiveTask.swift in Sources */,
 				B7488D8B2737292600DE2CED /* ViewController.swift in Sources */,
 				B7C2198B27372C95005100D7 /* ORKESerialization.m in Sources */,

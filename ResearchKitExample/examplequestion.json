@@ -7,11 +7,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "chocolate"
+          "value" : "chocolate"
           
       },
       {
-          "body" : "strawberry"
+          "value" : "strawberry"
       }
       ]
     },
@@ -37,11 +37,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "Yes"
+          "value" : "Yes"
           
       },
       {
-          "body" : "No"
+          "value" : "No"
           
       }
       ],
@@ -108,11 +108,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "Yes"
+          "value" : "Yes"
           
       },
       {
-          "body" : "No"
+          "value" : "No"
           
       }
       ]
@@ -124,11 +124,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "Yes"
+          "value" : "Yes"
           
       },
       {
-          "body" : "No"
+          "value" : "No"
           
       }
       ],
@@ -151,11 +151,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "Yes"
+          "value" : "Yes"
           
       },
       {
-          "body" : "No"
+          "value" : "No"
           
       }
       ],
@@ -167,15 +167,15 @@
       "question_type": "multi_select",
       "answers": [
       {
-          "body" : "Pop"
+          "value" : "Pop"
           
       },
       {
-          "body" : "Rock"
+          "value" : "Rock"
           
       },
       {
-          "body" : "Rap"
+          "value" : "Rap"
           
       },
       ],
@@ -192,11 +192,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "Yes"
+          "value" : "Yes"
           
       },
       {
-          "body" : "No"
+          "value" : "No"
           
       }
       ],
@@ -345,11 +345,11 @@
       "question_type": "single_select",
       "answers": [
       {
-          "body" : "Yes"
+          "value" : "Yes"
           
       },
       {
-          "body" : "No"
+          "value" : "No"
           
       }
       ],

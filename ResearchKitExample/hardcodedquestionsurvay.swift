@@ -172,7 +172,7 @@ import Foundation
 //    let question4 = ORKFormItem(identifier: "question 4", text: "HChoice Answer text?", answerFormat: ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices))
 //
 //    let question5 = ORKFormItem(identifier: "question 5Eg", text: "Location?", answerFormat: ORKAnswerFormat.locationAnswerFormat())
-//
+
 //
 //    //3
 //    let formStep = ORKFormStep(identifier: "form step", title: "Softwareitis Survey", text: nil)
